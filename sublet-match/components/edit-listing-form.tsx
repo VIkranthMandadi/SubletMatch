@@ -337,7 +337,7 @@ export function EditListingForm({ listing }: EditListingFormProps) {
         <Button type="button" variant="outline" onClick={() => router.push("/dashboard")} disabled={isLoading || isProcessingImages}>Cancel</Button>
         <Button
           type="button"
-          disabled={isLoading || isProcessingImages || (imageIdsToDelete.length === 0 && newImageFiles.length === 0)}
+          disabled={isLoading || isProcessingImages}
           onClick={handleSubmitFormViaButton}
         >
           {isLoading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : "Save Changes"}
